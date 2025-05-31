@@ -7,6 +7,9 @@ creation_rules:
     encrypted_regex: "^(data|stringData)$"
     mac_only_encrypted: true
     age: "age1s0t937a3fa0m6wrhuyk5gasujqw584l382zjpc75885f2set9uksfs94jf"
+  - path_reqex: tailscale.patch.yaml
+    mac_only_encrypted: true
+    age: "age1s0t937a3fa0m6wrhuyk5gasujqw584l382zjpc75885f2set9uksfs94jf"
 stores:
   yaml:
     indent: 2
