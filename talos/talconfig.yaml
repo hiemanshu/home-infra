@@ -21,7 +21,7 @@ cniConfig:
 nodes:
   - hostname: "legolas"
     ipAddress: "192.168.68.20"
-    installDisk: "/dev/sdb"
+    installDisk: "/dev/nvme0n1"
     machineSpec:
       secureboot: false
     talosImageURL: factory.talos.dev/installer/445a99db4002e6127e7f6e2a96377ac2c06d0de52f7a186b5536c0ac2f2a2ece
