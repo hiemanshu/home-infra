@@ -29,10 +29,13 @@ spec:
       # Change to 3 later
       defaultClassReplicaCount: 2
     defaultSettings:
-      defaultDataPath: /var/lib/longhorn
+      # defaultDataPath: /var/lib/longhorn
       defaultLonghornStaticStorageClass: longhorn
       nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
       storageReservedPercentageForDefaultDisk: 10
       createDefaultDiskLabeledNodes: true
       defaultReplicaCount: 2 # Change to 3 later
       orphanAutoDeletion: true
+      storageMinimalAvailablePercentage: 10
+      replicaAutoBalance: best-effort
+      defaultDataLocality: best-effort
