@@ -3,7 +3,7 @@
 apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
-  name: overseerr
+  name: &app overseerr
 spec:
   interval: 30m
   chartRef:
@@ -83,7 +83,7 @@ spec:
                 port: *port
     persistence:
       config:
-        existingClaim: overseerr
+        existingClaim: *app # made by volsync
         globalMounts:
           - path: /app/config
       config-logs:
