@@ -1,4 +1,5 @@
 ---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/volsync.backube/replicationdestination_v1alpha1.json
 apiVersion: volsync.backube/v1alpha1
 kind: ReplicationDestination
 metadata:
@@ -18,5 +19,8 @@ spec:
     storageClassName: "${VOLSYNC_STORAGECLASS:-longhorn}"
     volumeSnapshotClassName: "${VOLSYNC_SNAPSHOTCLASS:-longhorn}"
     cacheStorageClassName: "${VOLSYNC_CACHE_STORAGECLASS:-longhorn-cache}"
+    enableFileDeletion: true
+    cleanupCachePVC: true
+    cleanupTempPVC: false
   trigger:
     manual: restore-once

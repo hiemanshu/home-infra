@@ -1,8 +1,9 @@
 ---
+# yaml-language-server: $schema=https://kubernetes-schemas.pages.dev/volsync.backube/replicationsource_v1alpha1.json
 apiVersion: volsync.backube/v1alpha1
 kind: ReplicationSource
 metadata:
-  name: "${APP}-minio"
+  name: "${APP}"
 spec:
   restic:
     accessModes: ["${VOLSYNC_SNAP_ACCESSMODES:-ReadWriteOnce}"]
@@ -20,6 +21,7 @@ spec:
       daily: 7
       hourly: 24
       weekly: 5
+      monthly: 3
     storageClassName: "${VOLSYNC_STORAGECLASS:-longhorn}"
     volumeSnapshotClassName: "${VOLSYNC_SNAPSHOTCLASS:-longhorn}"
   sourcePVC: "${APP}"
