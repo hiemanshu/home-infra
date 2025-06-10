@@ -14,6 +14,9 @@ spec:
       kind: HelmRelease
       name: snapshot-controller
       namespace: *namespace
+  dependsOn:
+    - name: longhorn
+      namespace: storage
   interval: 1h
   path: ./kubernetes/apps/storage/snapshot-controller/app
   prune: true
