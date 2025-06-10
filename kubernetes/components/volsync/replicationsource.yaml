@@ -10,9 +10,9 @@ spec:
     cacheCapacity: "${VOLSYNC_CACHE_CAPACITY:-5Gi}"
     copyMethod: "${VOLSYNC_COPYMETHOD:-Snapshot}"
     moverSecurityContext:
-      fsGroup: ${VOLSYNC_PGID:-3000}
-      runAsGroup: ${VOLSYNC_PGID:-3000}
-      runAsUser: ${VOLSYNC_PUID:-3000}
+      fsGroup: ${VOLSYNC_PGID:-568}
+      runAsGroup: ${VOLSYNC_PGID:-568}
+      runAsUser: ${VOLSYNC_PUID:-568}
     pruneIntervalDays: 7
     repository: "${APP}-volsync-minio-secret"
     retain:

@@ -5,16 +5,16 @@ metadata:
   name: "${APP}-dst"
 spec:
   restic:
+    repository: "${APP}-volsync-minio-secret"
+    copyMethod: Snapshot
     accessModes: ["${VOLSYNC_ACCESSMODES:-ReadWriteOnce}"]
     cacheAccessModes: ["${VOLSYNC_CACHE_ACCESSMODES:-ReadWriteOnce}"]
     cacheCapacity: "${VOLSYNC_CACHE_CAPACITY:-5Gi}"
     capacity: "${VOLSYNC_CAPACITY:-5Gi}"
-    copyMethod: Snapshot
     moverSecurityContext:
-      fsGroup: ${VOLSYNC_PGID:-3000}
-      runAsGroup: ${VOLSYNC_PGID:-3000}
-      runAsUser: ${VOLSYNC_PUID:-3000}
-    repository: "${APP}-volsync-minio-secret"
+      fsGroup: ${VOLSYNC_PGID:-568}
+      runAsGroup: ${VOLSYNC_PGID:-568}
+      runAsUser: ${VOLSYNC_PUID:-568}
     storageClassName: "${VOLSYNC_STORAGECLASS:-longhorn}"
     volumeSnapshotClassName: "${VOLSYNC_SNAPSHOTCLASS:-longhorn}"
   trigger:
