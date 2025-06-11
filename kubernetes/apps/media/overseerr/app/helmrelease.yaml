@@ -86,6 +86,8 @@ spec:
     persistence:
       config:
         existingClaim: *app
+        globalMounts:
+          - path: /app/config
       config-logs:
         type: emptyDir
         globalMounts:
