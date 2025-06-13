@@ -26,15 +26,14 @@ spec:
     monitoring:
       enabled: true
     persistence:
-      # Change to 3 later
-      defaultClassReplicaCount: 2
+      defaultClassReplicaCount: 3
     defaultSettings:
       # defaultDataPath: /var/lib/longhorn
       defaultLonghornStaticStorageClass: longhorn
       nodeDownPodDeletionPolicy: delete-both-statefulset-and-deployment-pod
       storageReservedPercentageForDefaultDisk: 10
       createDefaultDiskLabeledNodes: true
-      defaultReplicaCount: 2 # Change to 3 later
+      defaultReplicaCount: 3
       orphanAutoDeletion: true
       storageMinimalAvailablePercentage: 10
       replicaAutoBalance: best-effort

@@ -34,7 +34,7 @@ spec:
       retries: 3
   values:
     controller:
-      replicaCount: 2
+      replicaCount: 3
       serviceMonitor:
         create: true
       volumeSnapshotClasses:
