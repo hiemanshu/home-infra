@@ -76,7 +76,7 @@ spec:
         hostnames:
           - requests.hiems.net
         parentRefs:
-          - name: internal
+          - name: external
             namespace: kube-system
             sectionName: https
         rules:
