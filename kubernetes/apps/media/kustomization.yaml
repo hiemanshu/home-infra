@@ -12,3 +12,4 @@ resources:
   - ./sabnzbd/ks.yaml
   - ./plex/ks.yaml
   - ./jellyseerr/ks.yaml
+  - ./tautulli/ks.yaml
