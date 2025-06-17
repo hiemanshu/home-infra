@@ -11,6 +11,7 @@ spec:
       app.kubernetes.io/name: *app
   components:
     - ../../../../components/volsync
+    - ../../../../components/gatus/internal
   dependsOn:
     - name: intel-device-plugin-gpu
       namespace: kube-system
