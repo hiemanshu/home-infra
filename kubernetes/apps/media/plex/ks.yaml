@@ -11,7 +11,7 @@ spec:
       app.kubernetes.io/name: *app
   components:
     - ../../../../components/volsync
-    - ../../../../components/gatus/internal
+    - ../../../../components/gatus/external
   dependsOn:
     - name: intel-device-plugin-gpu
       namespace: kube-system
@@ -22,6 +22,7 @@ spec:
   postBuild:
     substitute:
       APP: *app
+      GATUS_PATH: /web/index.html
       VOLSYNC_CACHE_CAPACITY: 25Gi
       VOLSYNC_CAPACITY: 50Gi
   prune: true
