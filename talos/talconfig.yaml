@@ -57,25 +57,6 @@ nodes:
         mtu: 1500
         vip:
           ip: "192.168.69.1"
-  - hostname: "aragorn"
-    ipAddress: "192.168.68.22"
-    installDisk: "/dev/nvme0n1"
-    machineSpec:
-      secureboot: false
-    talosImageURL: factory.talos.dev/installer/445a99db4002e6127e7f6e2a96377ac2c06d0de52f7a186b5536c0ac2f2a2ece
-    controlPlane: true
-    networkInterfaces:
-      - deviceSelector:
-          hardwareAddr: "f8:75:a4:da:ea:6b"
-        dhcp: false
-        addresses:
-          - "192.168.68.22/22"
-        routes:
-          - network: "0.0.0.0/0"
-            gateway: "192.168.68.1"
-        mtu: 1500
-        vip:
-          ip: "192.168.69.1"
 
 # Global patches
 patches:
