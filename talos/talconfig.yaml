@@ -5,10 +5,10 @@ clusterName: LordOfTheClusters
 talosVersion: "${talosVersion}"
 kubernetesVersion: "${kubernetesVersion}"
 
-endpoint: https://192.168.69.1:6443
+endpoint: https://192.168.69.201:6443
 additionalApiServerCertSans: &sans
   - "127.0.0.1"
-  - "192.168.69.1"
+  - "192.168.69.201"
 additionalMachineCertSans: *sans
 
 clusterPodNets: ["10.42.0.0/16"]
@@ -37,7 +37,7 @@ nodes:
             gateway: "192.168.68.1"
         mtu: 1500
         vip:
-          ip: "192.168.69.1"
+          ip: "192.168.69.201"
   - hostname: "gimli"
     ipAddress: "192.168.68.21"
     installDisk: "/dev/nvme0n1"
@@ -56,7 +56,7 @@ nodes:
             gateway: "192.168.68.1"
         mtu: 1500
         vip:
-          ip: "192.168.69.1"
+          ip: "192.168.69.201"
 
 # Global patches
 patches:
